@@ -1,0 +1,123 @@
+/* navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    background: rgba(180 ,180 ,180 , 0.8);
+    width: 100%;
+    height: 1.5cm;
+    padding: 1rem 2rem 0.2rem;
+    display: flex;
+    justify-content: space-between;
+    z-index: 5;
+}
+
+.navbar img {
+    height: 2rem;
+    width: 2rem;
+}
+
+/* MenuDropdown */
+.MenuDropdown {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background: #000;
+    top:0;
+    left: 0;
+    z-index: -1;
+}
+
+.MenuDropdownBackground {
+    position: relative;
+    /* z-index: 0; */
+    display: grid;
+    height: 100vh;
+    width: 100vw;;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.menu {
+    grid-area: 1 / 1 / 2 / 3;
+}
+
+.MenuText {
+    display: grid;
+    grid-template-columns: 5% 90%;
+    position: absolute;
+    top: 1.5cm;
+    background: transparent;
+    width: 95%;
+    height: fit-content;
+    min-height: 85%;
+    margin: 1rem 2rem 2rem;
+    gap: 1rem;
+    animation: slide-up-menu ease 1s;
+}
+
+@keyframes slide-up-menu  {
+    0% { 
+        top: 10vh
+    }
+    100% { 
+        top: 1.5cm
+    }
+}
+
+.MenuText h1 {
+    margin: 0;
+    font-size: 80px;
+    -webkit-text-stroke: #fff 1px;
+    background-clip: text;
+    color: transparent;;
+}
+
+.MenuText h4 {
+    margin: 1rem 0 0;
+    color: #fff;
+}
+
+.borderparting {
+    border-right: rgba(165, 165, 165, 0.3) solid 2px;
+}
+
+.menu-block {
+    display: block;
+}
+.menu-none {
+    display: none;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.MenuText h1:hover {
+    animation: fills 0.5s ;
+    color: #fff;
+    cursor: pointer;
+}
+
+@keyframes fills {
+    0% {
+        color: transparent
+    }
+    100% {
+        color: #fff;
+    }
+}
+
+
+/* media queries */
+@media screen and (max-width: 650px) {
+    
+    .MenuText {
+        margin: 0rem;
+        padding: 2rem;
+        height: 90vh;
+        width: 100vw;
+    }
+    .MenuText h1 {
+        font-size: 8vw;
+    }
+}
+

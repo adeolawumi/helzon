@@ -1,0 +1,244 @@
+
+/* ContactUsLanding */
+*{
+    box-sizing: border-box;
+}
+body {
+    color:#fff;
+}
+.ContactUsLanding {
+    height: 100vh;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    background: #000;
+}
+
+.ContactUsLandingRight {
+    color: white;
+    max-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    grid-column: 3 / -1;
+    margin: 4rem 0;
+}
+
+.ContactUsLandingRight, .Africa-Image-Container {
+    grid-row: 1 / 2;
+}
+
+.Africa-Image-Container {
+    grid-column: 1 / 5;
+    height: 90%;
+}
+
+.Africa-Image-Container > img {
+    height: 80%;
+    max-width: 100%;
+}
+
+/* 
+.ContactUsLandingRight > div {
+    width: 100%
+    background: radial-gradient(50% 50% at 50% 50%, #FA8202 0%, rgba(250, 130, 2, 0) 100%),
+linear-gradient(0deg, #FFFFFF, #FFFFFF);
+
+} */
+
+.Stranger > div > div {
+    background:#fff;
+    height: 2px;
+    width: 300px;
+    display: inline-block;
+    margin-bottom:1.5rem ;
+}
+
+.Stranger > h2 {
+    font-size: 70px;
+    font-weight: 400;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.Stranger {
+    font-size: 70px;
+}
+
+.Address {
+    width: 80%;
+    font-size: 30px;
+}
+
+.Address > h6 {
+    margin-bottom: 0;
+}
+.hello {
+    background: radial-gradient(50% 50% at 50% 50%, #FA8202 0%, rgba(250, 130, 2, 0) 100%), linear-gradient(0deg, #000, #000);
+font-weight: 600;
+    background-clip: text;
+    color: transparent;
+}
+
+/* ContactUsLandingExtension */
+.ContactUsLandingExtension {
+    position: relative;
+    height: 110vh;
+    background: #000;
+}
+
+.ContactUsLandingExtension > img {
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    margin-top: 5%;
+}
+
+.C-U-L-E-Text {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width:100%;
+    z-index: 1;
+    color: #fff;
+    padding: 10% 5% 10% 10%;
+}
+.C-U-L-E-Text > div {
+    width: 50%;
+}
+.C-U-L-E-Text h3 {
+    font-weight: 300;
+    font-size: 30px;
+}
+.C-U-L-E-Text-Right p:nth-child(3) {
+    color: #fff !important;
+}
+h3:nth-child(2) {
+    border-bottom: #FA8202 solid 3px;
+    width: max-content;
+}
+
+p {
+    color: #747474;
+    font-size:20px;
+}
+p a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.C-U-L-E-Text-Right {
+    margin: 5rem 0 auto 40%;
+}
+
+/* ContactUsForm */
+.ContactUsForm {
+    height: fit-content;
+    position: relative;
+    z-index: 2;
+    padding: 1rem 8rem 4rem;
+    background: #000;
+}
+
+.ContactUsForm h1 {
+    font-size: 70px;
+}
+.ContactUsForm form {
+    height: 60vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 2rem;
+}
+
+form > input {
+    background: rgba(250, 130, 2, 0.15);
+    border: none;
+    border-bottom:  rgba(250, 130, 2, 1) solid 2px;
+    border-radius: 10px 10px 0 0;
+    outline: none;
+    color: #fff;
+    padding-left: 1rem;
+    vertical-align: top;
+}
+
+form > input:nth-child(1) {
+    grid-area: 1/1/2/3;
+}
+
+input:nth-child(4) {
+    grid-area: 3/1/span 2/ span 2 ;
+}
+
+.ContactUsForm button {
+    padding: 0.5rem;
+    text-align: left;
+    border: none;
+    border-bottom: #FA8202 solid 3px;
+}
+
+
+form button {
+    display: flex;
+    justify-content: space-between;
+    height: 80%;
+}
+
+button input:hover {
+    cursor: pointer;
+}
+
+button input {
+    height: 95%;
+    width: 95%;
+    color: #FA8202;
+    font-size: 28px;
+    border: none;
+}
+
+.chevron {
+    font-size: 30px;
+}
+
+/* media queries */
+@media screen and (max-width: 650px) {
+    /* contact us landing */
+    .Africa-Image-Container {
+        grid-column: 1 / 6;
+    }
+    
+    .ContactUsLandingRight {
+        grid-column: 1 / 6;
+    }
+
+    /* contact us form */
+    .ContactUsForm {
+        padding: 1rem 4rem 4rem;
+    }
+    .ContactUsForm form {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+    .ContactUsForm h1 {
+        font-size: 50px;
+    }
+    form > input:nth-child(1) {
+        grid-area: 1/1/ span 1/ span 1;
+    }
+    
+    input:nth-child(4) {
+        grid-area: 3/1/span 1/ span 1 ;
+    }
+
+    /* contact us extension */
+    .C-U-L-E-Text > div {
+        width: 100%;
+        margin: 1rem auto 1rem;
+    }
+    .C-U-L-E-Text {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: 10rem;
+    }
+    
+}

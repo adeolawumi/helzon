@@ -1,0 +1,17 @@
+body {
+  margin: 0;
+  font-family: Almarai;
+  box-sizing:border-box; 
+  width: 150vw;
+}
+
+html {scroll-behavior: smooth;}
+
+
+::-webkit-scrollbar{
+  display: none;
+}
+
+:root {
+  --transition: all 400ms ease-out;
+}

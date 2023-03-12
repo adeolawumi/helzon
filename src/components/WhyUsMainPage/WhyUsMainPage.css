@@ -1,0 +1,55 @@
+
+.WhyUsMainPage {
+    color: black;
+    padding: 6rem 0 0;
+}
+
+
+.WhyUsMainPage h1 {
+    font-family: italiana;
+}
+
+
+.WhyUsMainPage h1:nth-child(2) {
+    margin-left: 1rem;
+}
+
+.WhyUsMainPage > div {
+    position: relative;
+    padding: 6rem 6rem;
+    background: url('../../assets/tope-a-asokere-VE6e4CiMHao-unsplash.png');
+}
+
+.WhyUsTextContainer {
+    width: 80%;
+    border-left: black solid 3px;
+    margin: auto;
+    padding: 1rem;
+}
+
+.Ellipse-1 {
+    position:absolute;
+    height: 8rem;
+    width: 8rem;
+    right: 0;
+    bottom: 0
+}
+
+
+/* media queries */
+
+
+@media screen and (max-width: 800px) {
+    .WhyUsMainPage > div {
+        padding: 6rem 2rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .WhyUsMainPage > div {
+        padding: 6rem 1.5rem;
+    }
+    .WhyUsTextContainer {
+        width: 100%;
+    }
+}
